@@ -28,7 +28,9 @@ function Menu({ children, items = [], onChange = defaultFn }) {
 
     return (
         <Tippy
-            visible
+            onHide={() => {
+                setHistory(prev => prev.slice(0, 1));
+            }}
             delay={[0, 500]}
             interactive
             placement='bottom-end'
