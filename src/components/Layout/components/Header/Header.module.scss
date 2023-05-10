@@ -30,7 +30,7 @@
     height: var(--search-height);
     padding-left: 16px;
     display: flex;
-    background-color: rgba(22, 24, 35, .06);
+    background-color: rgba(22, 24, 35, 0.06);
     border-radius: var(--search-border-radius);
 
     input {
@@ -52,7 +52,7 @@
     }
 
     &:focus-within {
-        border: 1px solid rgba(22, 24, 35, 0.2);   
+        border: 1px solid rgba(22, 24, 35, 0.2);
     }
 }
 
@@ -60,7 +60,7 @@
     font-size: 1.4rem;
     font-weight: 600;
     padding: 5px 12px;
-    color: rgba(22, 24, 35, 0.5)
+    color: rgba(22, 24, 35, 0.5);
 }
 
 .clear,
@@ -72,8 +72,10 @@
     color: rgba(22, 24, 35, 0.34);
 }
 
-
 .search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: var(--search-button-width);
     height: 100%;
     border-top-right-radius: var(--search-border-radius);
@@ -106,19 +108,36 @@
 }
 
 .action-btn {
+    position: relative;
+    display: flex;
     color: #161823;
     font-size: 2.2rem;
     background-color: transparent;
-    padding: 4px 16px;
+    padding: 4px 10px;
     cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: -3px;
+    right: 0px;
+    padding: 0px 6px;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    font-family: "ProximaNova", sans-serif;
+    background-color: var(--primary);
 }
 
 // User avatar
 .user-avatar {
     width: 32px;
-    height: 32px; 
+    height: 32px;
     object-fit: cover;
     border-radius: 50%;
-    margin-left: 12px;
+    margin-left: 14px;
     cursor: pointer;
 }
