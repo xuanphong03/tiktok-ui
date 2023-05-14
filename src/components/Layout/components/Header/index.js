@@ -39,7 +39,7 @@ const MENUS_ITEMS = [
                     type: 'language',
                     code: 'vi',
                     title: 'Vietnamese',
-                }
+                },
             ]
         }
     },
