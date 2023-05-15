@@ -10,7 +10,7 @@ import HeadlessTippy from '@tippyjs/react/headless';
 import { SearchIcon } from '~/components/Icons';
 import AccountItem from '~/components/AccountItem';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
-import * as searchServices from '~/apiServices/searchService'
+import * as searchServices from '~/services/searchService'
 
 const cx = classNames.bind(styles)
 
@@ -19,12 +19,13 @@ function Search() {
     const [searchResult, setSearchResult] = useState([]);
     const [showResult, setShowResult] = useState(true);
     const [loading, setLoading] = useState(false);
+
     const debounced = useDebounce(searchValue, 500);
 
     const inputRef = useRef();
 
     useEffect(() => {
-        if (!searchValue.trim()) {
+        if (!debounced.trim()) {
             setSearchResult([]);
             return;
         }
