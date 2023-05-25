@@ -5,6 +5,7 @@ import Tippy from "@tippyjs/react/headless";
 import MenuItem from "./MenuItem";
 import Header from "./Header";
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
 const cx = classNames.bind(styles);
 const defaultFn = () => { };
@@ -38,7 +39,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
             render={attrs => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
                     <PopperWrapper className={cx('menu-popper')}>
-                        {history.length > 1 && <Header title={'Language'} onBack={() => {
+                        {history.length > 1 && <Header title={current.title} onBack={() => {
                             setHistory(prev => prev.slice(0, prev.length - 1));
                         }} />}
                         <div className={cx('menu-body')}>{renderItems()}</div>
@@ -49,6 +50,13 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
             {children}
         </Tippy>
     );
+}
+
+Menu.propTypes = {
+    children: PropTypes.node.isRequired,
+    items: PropTypes.array,
+    hideOnClick: PropTypes.bool,
+    onChange: PropTypes.func,
 }
 
 export default Menu;
