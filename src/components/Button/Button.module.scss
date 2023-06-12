@@ -13,7 +13,7 @@
     user-select: none;
     cursor: pointer;
 
-    +.wrapper {
+    + .wrapper {
         margin-left: 8px;
     }
 
@@ -38,10 +38,10 @@
 .rounded {
     border-radius: 52px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    border-color: rgba(22, 24, 35, .12);
+    border-color: rgba(22, 24, 35, 0.12);
 
     &:hover {
-        border-color: rgba(22, 24, 35, .2);
+        border-color: rgba(22, 24, 35, 0.2);
         background-color: rgba(255, 255, 255, 1);
     }
 }
@@ -53,7 +53,7 @@
 
     &:hover {
         border-color: var(--primary);
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),#FE2C55;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
     }
 }
 
@@ -68,13 +68,12 @@
 }
 
 .text {
-
     &:hover {
         text-decoration: underline;
     }
 }
 
-// Button size 
+// Button size
 .small {
     min-width: 88px;
     padding: 4px 16px;
