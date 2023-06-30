@@ -12,12 +12,13 @@
     border-radius: var(--search-border-radius);
 
     input {
+        padding-right: 40px;
         height: 100%;
         color: var(--black);
         font-size: 1.6rem;
         background-color: transparent;
         caret-color: var(--primary);
-        flex: 1;    
+        flex: 1;
         font-family: var(--font-family);
     }
 
@@ -26,7 +27,7 @@
     }
 
     &::after {
-        content: "";
+        content: '';
         position: absolute;
         border: 1px solid rgba(22, 24, 35, 0.12);
         top: var(--search-top-space);
@@ -61,10 +62,10 @@
 
 @keyframes spinner {
     from {
-        transform:  translateY(-50%) rotate(0);
+        transform: translateY(-50%) rotate(0);
     }
     to {
-        transform:  translateY(-50%) rotate(360deg);
+        transform: translateY(-50%) rotate(360deg);
     }
 }
 
